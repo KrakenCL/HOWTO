@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "KrakenKit",
+        "repositoryURL": "https://github.com/KrakenCL/KrakenKit.git",
+        "state": {
+          "branch": null,
+          "revision": "9b3d1fbaf39aaa0f53d1b814f3a2811263e77ab3",
+          "version": "0.0.1"
+        }
+      },
+      {
+        "package": "LibPNG",
+        "repositoryURL": "https://github.com/KrakenCL/LibPNG.git",
+        "state": {
+          "branch": null,
+          "revision": "9941abff1c1683f0da3358a12f614bd7ce3b5780",
+          "version": "0.0.3"
+        }
+      },
+      {
+        "package": "SwiftPM",
+        "repositoryURL": "https://github.com/apple/swift-package-manager.git",
+        "state": {
+          "branch": null,
+          "revision": "235aacc514cb81a6881364b0fedcb3dd083228f3",
+          "version": "0.3.0"
+        }
+      },
+      {
+        "package": "SwiftProtobuf",
+        "repositoryURL": "https://github.com/apple/swift-protobuf.git",
+        "state": {
+          "branch": null,
+          "revision": "ab98c52b5166593ad1ae0df246463266df151cfa",
+          "version": "1.3.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

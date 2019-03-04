@@ -8,13 +8,16 @@ There is an example how to use [TensorBoard](https://www.tensorflow.org/guide/su
 * Distributions
 * Histograms
 
+
 ## Download Swift for TensorFlow latest toolchain.
 There is [installation guide](https://github.com/tensorflow/swift/blob/master/Installation.md)
+
 
 ## Setup your environment
 ```
 $ export PATH="${PATH}":/Library/Developer/Toolchains/swift-latest/usr/bin/
 ```
+
 
 ## Add `KrakenKit` to your `Package.swift` file.
 ```
@@ -22,6 +25,23 @@ dependencies: [
     .package(url: "https://github.com/KrakenCL/KrakenKit.git", from: "0.0.1")
 ],
 ```
+
+
+## Install PNG library
+`KrakenKit` using libpng to make images. In that case you have to install it on your OS.
+
+### Install libpng and pkg-conf
+
+On MacOS using brew:
+```
+$ brew install pkgconfig libpng
+```
+
+on Linux apt:
+```
+$ sudo apt install pkgconfig libpng
+```
+
 
 ## Add `FileWriter` and `Summary` to your project.
 ```
@@ -46,20 +66,24 @@ try! fileWriter.add(summary: summary, step: epoch)
 
 ```
 
+
 ## Select example
 ```
 $ cd TensorBoardMNIST
 ```
+
 
 ## Build package 
 ```
 $ /Library/Developer/Toolchains/swift-latest/usr/bin/swift build
 ```
 
+
 ## Run package
 ```
 $ /Library/Developer/Toolchains/swift-latest/usr/bin/swift run TensorBoardMNIST -r ./Resources/ -l /tmp/mnist/
 ```
+
 
 ## Run TensorBoard
 ```
@@ -69,6 +93,7 @@ $ tensorboard --logdir=/tmp/mnist/
 ![scalars](https://raw.githubusercontent.com/KrakenCL/HOWTO/master/docs/images.png)
 ![scalars](https://raw.githubusercontent.com/KrakenCL/HOWTO/master/docs/distributions.png)
 ![scalars](https://raw.githubusercontent.com/KrakenCL/HOWTO/master/docs/histograms.png)
+
 
 ## Result output
 ```
@@ -96,6 +121,7 @@ Constructing data tensors.
 [Epoch 19] Loss: 184.42844, Accuracy: 58903/60000 (0.9817167)
 
 ```
+
 
 ## Generate Xcode porject file 
 ```

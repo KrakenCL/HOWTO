@@ -1,6 +1,13 @@
 # HOWTO
 Repository for experiments and examples.
 
+![scalars](https://raw.githubusercontent.com/KrakenCL/HOWTO/master/docs/scalars.png)
+There is an example how to use [TensorBoard](https://www.tensorflow.org/guide/summaries_and_tensorboard) visualization tool to represent:  
+* Scalars
+* Images
+* Distributions
+* Histograms
+
 ## Download Swift for TensorFlow latest toolchain.
 There is [installation guide](https://github.com/tensorflow/swift/blob/master/Installation.md)
 
@@ -12,18 +19,17 @@ $ export PATH="${PATH}":/Library/Developer/Toolchains/swift-latest/usr/bin/
 ## Add `KrakenKit` to your `Package.swift` file.
 ```
 dependencies: [
-.package(url: "https://github.com/KrakenCL/KrakenKit.git", from: "0.0.1")
+    .package(url: "https://github.com/KrakenCL/KrakenKit.git", from: "0.0.1")
 ],
-
 ```
 
-## Add FileWriter and Summary to your project.
+## Add `FileWriter` and `Summary` to your project.
 ```
 import KrakenKit
 
 guard let fileWriterURL = URL(string: logFolder), let fileWriter = try? FileWriter(folder: fileWriterURL, identifier: "MNIST") else {
-print("Can't prepare FileWriter.")
-exit(0)
+    print("Can't prepare FileWriter.")
+    exit(0)
 }
 
 let summary = Summary()
@@ -59,6 +65,10 @@ $ /Library/Developer/Toolchains/swift-latest/usr/bin/swift run TensorBoardMNIST 
 ```
 $ tensorboard --logdir=/tmp/mnist/
 ```
+![scalars](https://raw.githubusercontent.com/KrakenCL/HOWTO/master/docs/scalars.png)
+![scalars](https://raw.githubusercontent.com/KrakenCL/HOWTO/master/docs/images.png)
+![scalars](https://raw.githubusercontent.com/KrakenCL/HOWTO/master/docs/distributions.png)
+![scalars](https://raw.githubusercontent.com/KrakenCL/HOWTO/master/docs/histograms.png)
 
 ## Result output
 ```
